@@ -1,0 +1,12 @@
+cffi==1.15.1
+cryptography==38.0.1
+jaraco.classes==3.2.3
+jeepney==0.8.0
+keyring==23.9.3
+more-itertools==9.0.0
+pyaes==1.6.1
+pycparser==2.21
+Pyrogram==2.0.59
+PySocks==1.7.1
+SecretStorage==3.3.3
+TgCrypto==1.2.4
