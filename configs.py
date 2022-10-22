@@ -1,3 +1,4 @@
+import pyromod.listen  # noqa
 import keyring
 from pyrogram import Client
 
