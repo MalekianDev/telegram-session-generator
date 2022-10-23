@@ -32,10 +32,12 @@ async def pyro_session_generator_handler(_, message):
                                                         reply_markup=ForceReply())
                         try:
                             await client.check_password(password)
-                            string_session = await client.export_session_string()
-                            await message.reply(string_session, reply_markup=main_menu)
                         except PasswordHashInvalid:
                             await message.reply(WRONG_PASSWORD_TEXT, reply_markup=main_menu)
+                            return
+                    finally:
+                        string_session = await client.export_session_string()
+                        await message.reply(string_session, reply_markup=main_menu)
                 else:
                     await message.reply(START_TEXT, reply_markup=main_menu)
             except Exception as e:
